@@ -43,6 +43,9 @@ function sayHello() {
 
 function drawRectangle() {
 
+let rec = document.getElementById('canvas2').getContext('2d')
+// rec.strokeRect(50, 50, 50, 50);
+
 }
 
 /*
@@ -71,6 +74,7 @@ function drawRectangle() {
  */
 
 function drawColoredRectangle() {
+  let crec = document.getElementById('canvas7').getContext('2d');
 
 }
 
@@ -104,6 +108,7 @@ function drawColoredRectangle() {
  */
 
 function drawTriangle() {
+  let tri = document.getElementById('canvas7').getContext('2d');
 
 }
 
@@ -127,6 +132,7 @@ function drawTriangle() {
  */
 
 function drawSmileyFace() {
+  let smile = document.getElementById('canvas7').getContext('2d');
 
 }
 
@@ -149,6 +155,7 @@ function drawSmileyFace() {
  */
 
 function drawStar() {
+  let star = document.getElementById('canvas7').getContext('2d');
 
 }
 
@@ -168,6 +175,7 @@ function drawStar() {
  */
 
 function drawStopSign() {
+  let stop = document.getElementById('canvas7').getContext('2d');
 
 }
 
@@ -223,5 +231,6 @@ function drawPyramid() {
  */
 
 function drawHouse() {
+  let house = document.getElementById('canvas7').getContext('2d');
 
 }
