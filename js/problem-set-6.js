@@ -43,19 +43,37 @@ function sayHello() {
 
 function drawRectangle() {
 
-let canvas = document.getElementById('canvas2');
-  let ctx = canvas.getContext('2d');
-  ctx.clearRect(0, 0, canvas.width, canvas.height)
-  while(true){
-    var width=Number(prompt("Enter a valid width"))
-    var height=Number(prompt("Enter a valid height"))
-    var x=Number(prompt("Enter a valid topLeft x"))
-    var y=Number(prompt("Enter a valid topLeft y"))
-    if(width>=1 && height>=1 && x>=5 && y>=5 && canvas.width-x-width>=0 && canvas.height-y-height>=0){
-      break;
-    }
-  }
-  ctx.strokeRect(x, y, width, height);
+ let rectangle = document.getElementById("canvas2").getContext("2d");
+  let rectHeight;
+  let rectWidth;
+  let resmileyFace;
+  let rectY;
+  //Add limits to width height x and y at home.
+  do{rectHeight = Number(prompt("Height:"))
+}while(rectHeight >= canvas2.height && rectHeight < 1);
+console.log(rectHeight)
+
+  do{rectWidth = Number(prompt("Width:"))
+}while(rectWidth >= canvas2.width && rectWidth < 1);
+console.log(rectWidth)
+
+  do{resmileyFace = Number(prompt("X-Coordinate:"))
+}while(resmileyFace <= canvas2.width && resmileyFace < 5)
+console.log(resmileyFace)
+
+do{rectY = Number(prompt("Y-Coordinate:"))
+}while(rectY <= canvas2.height && rectY < 5)
+
+if(rectHeight > canvas2.height && rectWidth > canvas2.width && resmileyFace > canvas2.width && rectY > canvas2.height){
+  alert("These rectangle dimensions are improper! Please try again!");
+}
+else{
+  console.log(rectY)
+  rectangle.clearRect(0, 0, canvas2.width, canvas2.height);
+  rectangle.strokeRect(resmileyFace, rectY, rectWidth, rectHeight);
+}
+
+
 }
 /*
  * Color. 3 points.
